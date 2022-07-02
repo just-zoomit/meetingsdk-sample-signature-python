@@ -45,10 +45,10 @@ def decode_signature(token, sdk_secret):
       return jwt.decode(token,sdk_secret, algorithms=["HS256"])
 
 if __name__ == '__main__':
-    mn = '94995306902'
+    mn = 'MEETING NUMBER'
     role = 0
-    SDK_Key = "4ASmoeC9qV2BAcj8XFNPD9GK9uTrg60582Fm"
-    SDK_Secret= "ZuX1Zz0KDVAPhshIlEgPguZGxY4gcoPP93RD"
+    SDK_Key = "YOUR SDK KEY"
+    SDK_Secret= "YOUR SDK SECRET"
     encoded_token = generate_signature(mn,role, SDK_Key, SDK_Secret)
     payload = decode_signature(encoded_token,SDK_Secret)
 
